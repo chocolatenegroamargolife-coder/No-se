@@ -1,0 +1,45 @@
+
+:root {
+    --dark-color: #0b0e14;
+    --accent-color: #00d4ff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    margin: 0;
+    overflow: hidden;
+    perspective: 1000px; 
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.escena {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); 
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.flor {
+    font-size: 5rem;
+    margin-top: 20px;
+    
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px var(--accent-color));
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
